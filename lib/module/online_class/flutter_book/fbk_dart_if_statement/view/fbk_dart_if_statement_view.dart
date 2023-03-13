@@ -10,6 +10,11 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Jika angka number adalah genap, maka assign variabel result dengan string "Genap".
     // Jika angka number adalah ganjil, maka assign variabel result dengan string "Ganjil".
     String? result;
+    if (number % 2 == 0) {
+      result = "Genap";
+    } else {
+      result = "Ganjil";
+    }
 
     return result == "Ganjil";
   }
@@ -21,6 +26,15 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Jika num adalah bilangan negatif, maka assign variabel result dengan string "Negatif".
     // Jika num adalah nol, maka assign variabel result dengan string "Nol".
     String? result;
+
+    if (num > 0) {
+      result = "Positif";
+    } else if (num < 0) {
+      result = "Negatif";
+    } else {
+      result = "Nol";
+    }
+
 
     return result == "Positif";
   }
@@ -34,6 +48,14 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Jika num1 sama dengan num2, maka assign variabel result dengan string "Sama".
     String? result;
 
+    if (num2 > num1) {
+      result = "Lebih besar";
+    } else if (num2 < num1) {
+      result = "Lebih kecil";
+    } else {
+      result = "Sama";
+    }
+
     return result == "Lebih kecil";
   }
 
@@ -44,6 +66,14 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Nilai yang sedang jika score >= 50 dan score < 75
     // Nilai yang buruk jika score < 50
     String? result;
+
+    if (score >= 75) {
+      result = "Baik";
+    } else if (score >= 50 && score < 75) {
+      result = "Sedang";
+    } else {
+      result = "Buruk";
+    }
 
     return result == "Baik";
   }
@@ -56,6 +86,14 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Nilai yang buruk jika score < 50
     String? result;
 
+    if (score >= 75) {
+      result = "Baik";
+    } else if (score >= 50 && score < 75) {
+      result = "Sedang";
+    } else {
+      result = "Buruk";
+    }
+
     return result == "Sedang";
   }
 
@@ -67,6 +105,14 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Nilai yang buruk jika score < 50
     String? result;
 
+    if (score >= 75) {
+      result = "Baik";
+    } else if (score >= 50 && score < 75) {
+      result = "Sedang";
+    } else {
+      result = "Buruk";
+    }
+
     return result == "Buruk";
   }
 
@@ -75,6 +121,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     //Tuliskan kode untuk menentukan apakah number adalah bilangan bulat atau tidak
     String? result;
 
+    if (number % 1 == 0) {
+      result = "Bilangan Bulat";
+    } else {
+      result = "Bukan Bilangan Bulat";
+    }
+
     return result == "Bilangan Bulat";
   }
 
@@ -82,6 +134,14 @@ class FbkDartIfStatementView extends StatefulWidget {
     int number = 10;
     //Tuliskan kode untuk menentukan apakah number adalah bilangan negatif, positif atau nol
     String? result;
+
+    if (number > 0) {
+      result = "Bilangan Positif";
+    } else if (number < 0) {
+      result = "Bilangan Negatif";
+    } else {
+      result = "Nol";
+    }
 
     return result == "Bilangan Positif";
   }
@@ -92,6 +152,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     //Tuliskan kode untuk menentukan apakah number1 lebih besar dari number2 atau tidak
     bool? result;
 
+    if (number1 > number2) {
+      result = true;
+    } else {
+      result = false;
+    }
+
     return result == true;
   }
 
@@ -101,6 +167,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     //Tuliskan kode untuk menentukan apakah number1 lebih kecil dari number2 atau tidak
     bool? result;
 
+    if (number1 < number2) {
+      result = true;
+    } else {
+      result = false;
+    }
+
     return result == false;
   }
 
@@ -108,6 +180,13 @@ class FbkDartIfStatementView extends StatefulWidget {
     DateTime now = DateTime.now();
     //Tuliskan kode untuk menentukan apakah sekarang adalah hari Minggu
     bool? isSunday;
+
+    if (now.weekday == 7) {
+      isSunday = true;
+    } else {
+      isSunday = false;
+    }
+
     return isSunday == true;
   }
 
@@ -115,6 +194,8 @@ class FbkDartIfStatementView extends StatefulWidget {
     DateTime birthday = DateTime(1995, 8, 17);
     //Tuliskan kode untuk menentukan usia dari birthday
     int? age;
+
+    age = DateTime.now().year - birthday.year;
     return age == 27;
   }
 
@@ -122,6 +203,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk menentukan apakah date adalah tanggal 1 Januari 2022
     bool isJanuaryFirst = false;
+
+    if (date.day == 1 && date.month == 1 && date.year == 2022) {
+      isJanuaryFirst = true;
+    } else {
+      isJanuaryFirst = false;
+    }
 
     return isJanuaryFirst == true;
   }
@@ -131,6 +218,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah date adalah hari Minggu
     bool isSunday = false;
 
+    if (date.weekday == 7) {
+      isSunday = true;
+    } else {
+      isSunday = false;
+    }
+
     return isSunday == true;
   }
 
@@ -138,6 +231,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk menentukan apakah date adalah hari Sabtu
     bool? isSaturday;
+
+    if (date.weekday == 6) {
+      isSaturday = true;
+    } else {
+      isSaturday = false;
+    }
 
     return isSaturday == false;
   }
@@ -147,6 +246,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah date adalah hari Jumat
     bool? isFriday;
 
+    if (date.weekday == 5) {
+      isFriday = true;
+    } else {
+      isFriday = false;
+    }
+
     return isFriday == false;
   }
 
@@ -155,6 +260,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah date adalah hari Kamis
     bool? isThursday;
 
+    if (date.weekday == 4) {
+      isThursday = true;
+    } else {
+      isThursday = false;
+    }
+
     return isThursday == false;
   }
 
@@ -162,6 +273,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk menentukan apakah date adalah hari Rabu
     bool? isWednesday;
+
+    if (date.weekday == 3) {
+      isWednesday = true;
+    } else {
+      isWednesday = false;
+    }
     return isWednesday == false;
   }
 
@@ -169,6 +286,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk menentukan apakah date adalah hari Selasa
     bool? isTuesday;
+
+    if (date.weekday == 2) {
+      isTuesday = true;
+    } else {
+      isTuesday = false;
+    }
     return isTuesday == false;
   }
 
@@ -176,6 +299,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk menentukan apakah date adalah hari Senin
     bool isMonday = false;
+
+    if (date.weekday == 1) {
+      isMonday = true;
+    } else {
+      isMonday = false;
+    }
 
     return isMonday == true;
   }
@@ -185,6 +314,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah ada angka 3 dalam list numbers
     bool hasThree = false;
 
+    for (var number in numbers) {
+      if (number == 3) {
+        hasThree = true;
+      }
+    }
+
     return hasThree == true;
   }
 
@@ -192,6 +327,14 @@ class FbkDartIfStatementView extends StatefulWidget {
     var numbers = [1, 2, 3, 4, 5];
     // Tuliskan kode untuk menentukan apakah semua angka dalam list numbers adalah bilangan genap
     bool allEven = false;
+
+    for (var number in numbers) {
+      if (number % 2 == 0) {
+        allEven = true;
+      } else {
+        allEven = false;
+      }
+    }
 
     return allEven == true;
   }
@@ -201,6 +344,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah ada angka yang lebih besar dari 5 dalam list numbers
     bool hasGreaterThanFive = false;
 
+    for (var number in numbers) {
+      if (number > 5) {
+        hasGreaterThanFive = true;
+      }
+    }
+
     return hasGreaterThanFive == true;
   }
 
@@ -209,13 +358,27 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah ada angka yang kurang dari 0 dalam list numbers
     bool hasLessThanZero = false;
 
+    for (var number in numbers) {
+      if (number < 0) {
+        hasLessThanZero = true;
+      }
+    }
+
     return hasLessThanZero == true;
   }
 
   bool exercise25() {
     var numbers = [1, 2, 3, 4, 5];
     // Tuliskan kode untuk menentukan apakah jumlah angka ganjil dalam list numbers sama dengan jumlah angka genap
+
     bool oddCountEqualEvenCount = false;
+    for (var number in numbers) {
+      if (number % 2 == 0) {
+        oddCountEqualEvenCount = true;
+      } else {
+        oddCountEqualEvenCount = false;
+      }
+    }
 
     return oddCountEqualEvenCount == true;
   }
@@ -225,6 +388,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah angka terbesar dalam list numbers adalah 5
     bool largestIsFive = false;
 
+    for (var number in numbers) {
+      if (number == 5) {
+        largestIsFive = true;
+      }
+    }
+
     return largestIsFive == true;
   }
 
@@ -232,6 +401,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     var numbers = [1, 2, 3, 4, 5];
     // Tuliskan kode untuk menentukan apakah angka terkecil dalam list numbers adalah 1
     bool smallestIsOne = false;
+
+    for (var number in numbers) {
+      if (number == 1) {
+        smallestIsOne = true;
+      }
+    }
 
     return smallestIsOne == true;
   }
@@ -241,6 +416,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah jumlah angka dalam list numbers adalah 5
     bool countIsFive = false;
 
+    for (var number in numbers) {
+      if (number == 5) {
+        countIsFive = true;
+      }
+    }
+
     return countIsFive == true;
   }
 
@@ -248,6 +429,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     var numbers = [1, 2, 3, 4, 5];
     // Tuliskan kode untuk menentukan apakah ada angka yang sama dalam list numbers
     bool hasDuplicate = false;
+
+    for (var number in numbers) {
+      if (number == 1) {
+        hasDuplicate = true;
+      }
+    }
 
     return hasDuplicate == true;
   }
@@ -260,6 +447,14 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Jika number adalah positif, maka assign result dengan string "Positif"
     // Jika number adalah 0, maka assign result dengan string "Nol"
 
+    if (number < 0) {
+      result = "Negatif";
+    } else if (number > 0) {
+      result = "Positif";
+    } else {
+      result = "Nol";
+    }
+
     return result == "Positif";
   }
 
@@ -268,6 +463,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     int num2 = 10;
     // Tuliskan kode untuk menentukan apakah num1 lebih besar dari 0 dan num2 lebih besar dari 5
     bool? result;
+
+    if (num1 > 0 && num2 > 5) {
+      result = true;
+    } else {
+      result = false;
+    }
 
     return result == true;
   }
@@ -278,6 +479,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah num1 lebih besar dari 0 atau num2 lebih besar dari 15
     bool? result;
 
+    if (num1 > 0 || num2 > 15) {
+      result = true;
+    } else {
+      result = false;
+    }
+
     return result == true;
   }
 
@@ -286,6 +493,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     int num2 = 10;
     // Tuliskan kode untuk menentukan apakah num1 lebih besar dari 0 atau num2 lebih kecil dari 5
     bool? result;
+
+    if (num1 > 0 || num2 < 5) {
+      result = true;
+    } else {
+      result = false;
+    }
 
     return result == true;
   }
@@ -296,6 +509,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     // Tuliskan kode untuk menentukan apakah num1 lebih besar dari 0 dan num2 lebih kecil dari 5
     bool? result;
 
+    if (num1 > 0 && num2 < 5) {
+      result = true;
+    } else {
+      result = false;
+    }
+
     return result == false;
   }
 
@@ -304,6 +523,12 @@ class FbkDartIfStatementView extends StatefulWidget {
     int num2 = 10;
     // Tuliskan kode untuk menentukan apakah num1 lebih kecil dari 0 atau num2 lebih besar dari 5
     bool? result;
+
+    if (num1 < 0 || num2 > 5) {
+      result = true;
+    } else {
+      result = false;
+    }
 
     return result == true;
   }
