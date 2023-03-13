@@ -196,17 +196,17 @@ class FbkDartSymbolView extends StatefulWidget {
   bool? exercise13() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan kurung kurawal
-    
-  int x = 10;
-  int y = 20;
-  if (x > y){
-    print("x lebih besar dari y")
-  } else {
-    print("x lebih kecil dari y")
+
+    int x = 10;
+    int y = 20;
+    if (x > y) {
+      print("x lebih besar dari y");
+    } else {
+      print("x lebih kecil dari y");
+    }
+    return x > y;
   }
-  return x > y;
-  }
-    
+
   bool? exercise14() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan symbol dart

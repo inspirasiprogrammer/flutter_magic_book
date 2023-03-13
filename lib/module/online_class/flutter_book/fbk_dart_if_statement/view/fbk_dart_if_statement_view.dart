@@ -35,7 +35,6 @@ class FbkDartIfStatementView extends StatefulWidget {
       result = "Nol";
     }
 
-
     return result == "Positif";
   }
 
@@ -296,14 +295,11 @@ class FbkDartIfStatementView extends StatefulWidget {
   }
 
   bool exercise20() {
-    var date = DateTime(2022, 1, 1);
+    var date = DateTime(2022, 1, 3);
     // Tuliskan kode untuk menentukan apakah date adalah hari Senin
     bool isMonday = false;
-
     if (date.weekday == 1) {
       isMonday = true;
-    } else {
-      isMonday = false;
     }
 
     return isMonday == true;
@@ -331,8 +327,6 @@ class FbkDartIfStatementView extends StatefulWidget {
     for (var number in numbers) {
       if (number % 2 == 0) {
         allEven = true;
-      } else {
-        allEven = false;
       }
     }
 
@@ -441,7 +435,7 @@ class FbkDartIfStatementView extends StatefulWidget {
 
   bool exercise30() {
     var number = 5;
-    var result;
+    String result;
     // Tuliskan kode untuk menentukan apakah number adalah bilangan negatif atau positif atau nol
     // Jika number adalah negatif, maka assign result dengan string "Negatif"
     // Jika number adalah positif, maka assign result dengan string "Positif"
