@@ -11,16 +11,14 @@ class FbkDartSymbolView extends StatefulWidget {
     //Error-nya disebabkan karena kurang ;
     //Tambahkan titik koma pada bagian kode yang error
     List products = [];
-    /*
     products = [
       "GG FILTER 12",
       "JR SUPER 12",
       "GULA LAKU",
     ];
     for (var product in products) {
-      print(product)
+      print(product);
     }
-    */
     return products.isNotEmpty;
   }
 
@@ -29,16 +27,14 @@ class FbkDartSymbolView extends StatefulWidget {
     //Error-nya disebabkan karena kurang ,
     //Tambahkan , pada bagian kode yang error
     List products = [];
-    /*
     products = [
       "GG FILTER 12"
-      "JR SUPER 12"
-      "GULA LAKU",
+          "JR SUPER 12"
+          "GULA LAKU",
     ];
     for (var product in products) {
       print(product);
     }
-    */
     return products.isNotEmpty;
   }
 
@@ -51,13 +47,11 @@ class FbkDartSymbolView extends StatefulWidget {
     double total = qty * price;
     double discount = 0;
 
-    /*
     if (total >= 50) {
       discount = 0.25;
-    else {
+    } else {
       discount = 0.10;
     }
-    */
 
     return discount == 0.25;
   }
@@ -71,15 +65,13 @@ class FbkDartSymbolView extends StatefulWidget {
     double total = qty * price;
     double discount = 0;
 
-    /*
     if (total >= 100) {
       discount = 0.35;
-     else if (total >= 50) {
-      discount = 0.25
+    } else if (total >= 50) {
+      discount = 0.25;
     } else {
       discount = 0.10;
-    */
-
+    }
     return discount == 0.35;
   }
 
@@ -88,16 +80,12 @@ class FbkDartSymbolView extends StatefulWidget {
     //Error-nya disebabkan karena menggunakan {} pada List
     //Seharusnya menggunakan [];
     //Perbaiki bagian yang error
-
-    List productCategories = [];
-
-    /*
-    productCategories = {
+    List<String> productCategories = [];
+    productCategories = [
       "GG FILTER",
       "JR SUPER 12",
       "SUSU DANCOW",
-    };
-    */
+    ];
     return productCategories.isNotEmpty;
   }
 
@@ -105,16 +93,13 @@ class FbkDartSymbolView extends StatefulWidget {
     //Uncomment kode di bawah ini
     //Error-nya disebabkan karena terlalu banyak menggunakan ,
     //Perbaiki bagian yang error
+    List<String> productCategories = [];
 
-    List productCategories = [];
-
-    /*
     productCategories = [
-      "GG FILTER",,
+      "GG FILTER",
       "JR SUPER 12",
       "SUSU DANCOW",
-    ],;,
-    */
+    ];
 
     return productCategories.isNotEmpty;
   }
@@ -122,12 +107,11 @@ class FbkDartSymbolView extends StatefulWidget {
   bool? exercise7() {
     //Uncomment kode di bawah ini
     //Perbaiki error dibawah!
+    List<String> productCategories = [];
 
-    List productCategories = [];
-    /*
-    if (productCategories.isEmpty {
-      productCategories.add("TEH GELAS OT")
-    */
+    if (productCategories.isEmpty) {
+      productCategories.add("TEH GELAS OT");
+    }
     return productCategories.isNotEmpty;
   }
 
@@ -153,16 +137,14 @@ class FbkDartSymbolView extends StatefulWidget {
     //Perbaiki error dibawah!
 
     List arr = [];
-    /*
     for (var i = 0; i < 10; i++) {
       String str = "";
       for (var n = 0; n <= i; n++) {
-        str += "*",
-      
-      print(str),
+        str += "*";
+      }
+      print(str);
       arr.add(str);
     }
-    */
     return arr.isNotEmpty;
   }
 
@@ -171,60 +153,60 @@ class FbkDartSymbolView extends StatefulWidget {
     //Perbaiki error dibawah!
 
     List arr = [];
-    /*
-    for var i = 0; i < 10; i++) {
+
+    for (var i = 0; i < 10; i++) {
       String str = "";
-      for (var n = 0;; n <= i; n++) {
-        if (n % 2 == 0 {
+      for (var n = 0; n <= i; n++) {
+        if (n % 2 == 0) {
           str += "~";
         } else {
           str += "*";
         }
-      
+      }
       print(str);
       arr.add(str);
     }
-    */
+
     return arr.isNotEmpty;
   }
 
   bool? exercise11() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan titik koma
-    /*
-  var names = ["John" "Jane" "Jim"]
-  for (String name in names)
-    print("Hello, " + name)
-  */
-    // return names.length == 3;
+
+    var names = ["John" "Jane" "Jim"];
+    for (String name in names) {
+      print("Hello, $name");
+    }
+
+    return names.length == 3;
   }
 
   bool? exercise12() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan kurung
-    /*
-  int x = 10
-  int y = 20
-  int result = x * y
-  print("Hasil: " + result.toString())
-  // return result == 200;
-  */
+
+    int x = 10;
+    int y = 20;
+    int result = x * y;
+    print("Hasil: $result");
+    return result == 200;
   }
 
   bool? exercise13() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan kurung kurawal
-    /*
-  int x = 10
-  int y = 20
-  if x > y
+    
+  int x = 10;
+  int y = 20;
+  if (x > y){
     print("x lebih besar dari y")
-  else
+  } else {
     print("x lebih kecil dari y")
-  */
-    // return x > y;
   }
-
+  return x > y;
+  }
+    
   bool? exercise14() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan symbol dart
