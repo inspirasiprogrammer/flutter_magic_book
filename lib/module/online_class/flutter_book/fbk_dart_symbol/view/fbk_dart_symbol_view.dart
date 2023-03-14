@@ -174,10 +174,12 @@ class FbkDartSymbolView extends StatefulWidget {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan titik koma
 
-    var names = ["John" "Jane" "Jim"];
+    var names = ["John", "Jane", "Jim"];
+
     for (String name in names) {
       print("Hello, $name");
     }
+    print(names.length);
 
     return names.length == 3;
   }
@@ -196,7 +198,6 @@ class FbkDartSymbolView extends StatefulWidget {
   bool? exercise13() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan kurung kurawal
-
     int x = 10;
     int y = 20;
     if (x > y) {
@@ -204,116 +205,7 @@ class FbkDartSymbolView extends StatefulWidget {
     } else {
       print("x lebih kecil dari y");
     }
-    return x > y;
-  }
-
-  bool? exercise14() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan symbol dart
-    /*
-  List numbers = [1, 2, 3, 4, 5]
-  for (int number in numbers)
-    print(number)
-  */
-    // return numbers.length == 5;
-  }
-
-  bool? exercise15() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan koma
-    /*
-  Map user = {"name": "John" "age": 20}
-  print("Nama: " + user["name"] + ", Umur: " + user["age"].toString())
-  */
-    // return user.length == 2;
-  }
-
-  bool? exercise16() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan titik koma
-    /*
-  int x = 10
-  int y = 20
-  int result = x + y
-  print("Hasil: $result")
-  */
-    // return result == 30;
-  }
-
-  bool? exercise17() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan kurung kurawal
-    /*
-  List numbers = [1, 2, 3, 4, 5]
-  for (int number in numbers)
-    print(number * 2)
-  */
-    // return numbers.length == 5;
-  }
-
-  bool? exercise18() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan kurung
-    /*
-  int x = 10
-  int y = 20
-  int result = x * y
-  print("Hasil: $result")
-  */
-    // return result == 200;
-  }
-
-  bool? exercise19() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan symbol dart
-    /*
-  List products = "GG Filter 12", "JR Super 12", "Gula Laku"
-  for (String product in products)
-    print(product)
-  */
-    // return products.length == 3;
-  }
-
-  bool? exercise20() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan kurung kurawal
-    /*
-  int score = 80
-  if score >= 60
-    print("Lulus")
-  else
-    print("Tidak Lulus")
-  */
-    // return score >= 60;
-  }
-
-  bool? exercise21() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan titik koma
-    /*
-  Map user = {"name": "John", "age": 20}
-  print("Nama: ${user["name"]}, Umur: ${user["age"]}")
-  */
-    // return user.length == 2;
-  }
-
-  bool? exercise22() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan symbol dart
-    /*
-  List numbers = [1, 2, 3, 4, 5]
-  for (int number in numbers)
-    if (number % 2 == 0)
-      print("Bilangan genap: $number")
-    else
-      print("Bilangan ganjil: $number")
-  */
-    // return numbers.length == 5;
-  }
-
-  bool? exercise23() {
-    //Uncomment kode di bawah ini dan perbaikilah!
-    //Error-nya disebabkan karena lupa memberikan kurung kurawal
+    return x < y;
     /*
   int x = 10
   int y = 20
@@ -325,30 +217,161 @@ class FbkDartSymbolView extends StatefulWidget {
     // return x > y;
   }
 
+  bool? exercise14() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan symbol dart
+    List numbers = [1, 2, 3, 4, 5];
+    for (int number in numbers) {
+      print(number);
+    }
+    return numbers.length == 5;
+    /*
+  List numbers = [1, 2, 3, 4, 5]
+  for (int number in numbers)
+    print(number)
+  */
+    // return numbers.length == 5;
+  }
+
+  bool? exercise15() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan koma
+
+    Map user = {"name": "John", "age": 20};
+    print("${"Nama: " + user["name"]}, Umur: ${user["age"]}");
+    return user.length == 2;
+  }
+
+  bool? exercise16() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan titik koma
+
+    int x = 10;
+    int y = 20;
+    int result = x + y;
+    print("Hasil: $result");
+    return result == 30;
+  }
+
+  bool? exercise17() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan kurung kurawal
+
+    List numbers = [1, 2, 3, 4, 5];
+    for (int number in numbers) {
+      print(number * 2);
+    }
+
+    return numbers.length == 5;
+  }
+
+  bool? exercise18() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan kurung
+
+    int x = 10;
+    int y = 20;
+    int result = x * y;
+    print("Hasil: $result");
+
+    return result == 200;
+  }
+
+  bool? exercise19() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan symbol dart
+    List products = ["GG Filter 12", "JR Super 12", "Gula Laku"];
+
+    for (String product in products) {
+      print(product);
+    }
+    return products.length == 3;
+  }
+
+  bool? exercise20() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan kurung kurawal
+    int score = 80;
+    if (score >= 60) {
+      print("Lulus");
+    } else {
+      print("Tidak Lulus");
+    }
+    return score >= 60;
+  }
+
+  bool? exercise21() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan titik koma
+
+    Map user = {"name": "John", "age": 20};
+    print("Nama: ${user["name"]}, Umur: ${user["age"]}");
+
+    return user.length == 2;
+  }
+
+  bool? exercise22() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan symbol dart
+
+    List numbers = [1, 2, 3, 4, 5];
+    for (int number in numbers) {
+      if (number % 2 == 0) {
+        print("Bilangan genap: $number");
+      } else {
+        print("Bilangan ganjil: $number");
+      }
+    }
+
+    return numbers.length == 5;
+  }
+
+  bool? exercise23() {
+    //Uncomment kode di bawah ini dan perbaikilah!
+    //Error-nya disebabkan karena lupa memberikan kurung kurawal
+
+    int x = 10;
+    int y = 20;
+    if (x > y) {
+      print("x lebih besar dari y");
+    } else {
+      print("x lebih kecil dari y");
+    }
+    return x < y;
+  }
+
   bool? exercise24() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan titik koma
-    /*
-  List products = ["GG Filter 12", "JR Super 12", "Gula Laku"]
-  for (String product in products)
-    print(product)
-  */
-    // return products.length == 3;
+
+    List products = ["GG Filter 12", "JR Super 12", "Gula Laku"];
+    for (String product in products) {
+      print(product);
+    }
+
+    return products.length == 3;
   }
 
   bool? exercise25() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan symbol dart
-    /*
-  Map user = {"name": "John", "age": 20}
-  print("Nama: ${user["name"]}, Umur: ${user["age"]}")
-  */
-    // return user.length == 2;
+
+    Map user = {"name": "John", "age": 20};
+    print("Nama: ${user["name"]}, Umur: ${user["age"]}");
+
+    return user.length == 2;
   }
 
   bool? exercise26() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan kurung kurawal
+    int score = 80;
+    if (score >= 60) {
+      print("Lulus");
+    } else {
+      print("Tidak Lulus");
+    }
+    return score >= 60;
     /*
   int score = 80
   if score >= 60
@@ -362,106 +385,104 @@ class FbkDartSymbolView extends StatefulWidget {
   bool? exercise27() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan titik koma
-    /*
-  List numbers = [1, 2, 3, 4, 5]
-  for (int number in numbers)
-    print(number * 2)
-  */
-    // return numbers.length == 5;
+
+    List numbers = [1, 2, 3, 4, 5];
+    for (int number in numbers) {
+      print(number * 2);
+    }
+
+    return numbers.length == 5;
   }
 
   bool? exercise28() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan kurung
-    /*
-  int x = 10
-  int y = 20
-  int result = x * y
-  print("Hasil: $result")
-  */
-    // return result == 200;
+
+    int x = 10;
+    int y = 20;
+    int result = x * y;
+    print("Hasil: $result");
+
+    return result == 200;
   }
 
   bool? exercise29() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan symbol dart
-    /*
-  Map user = {"name": "John", "age": 20}
-  print("Nama: ${user["name"]}, Umur: ${user["age"]}")
 
- return user.length == 2;
- */
+    Map user = {"name": "John", "age": 20};
+    print("Nama: ${user["name"]}, Umur: ${user["age"]}");
+    return user.length == 2;
   }
 
   bool? exercise30() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan kurung kurawal
-    /*
-  int score = 80
-  if score >= 60
-    print("Lulus")
-  else
-    print("Tidak Lulus")
-  */
-    // return score >= 60;
+
+    int score = 80;
+    if (score >= 60) {
+      print("Lulus");
+    } else {
+      print("Tidak Lulus");
+    }
+    return score >= 60;
   }
 
   bool? exercise31() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan titik koma
-    /*
-  List products = ["GG Filter 12", "JR Super 12", "Gula Laku"]
-  for (String product in products)
-    print(product)
-  */
-    // return products.length == 3;
+
+    List products = ["GG Filter 12", "JR Super 12", "Gula Laku"];
+    for (String product in products) {
+      print(product);
+    }
+
+    return products.length == 3;
   }
 
   bool? exercise32() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan symbol dart
 
-    /*
-    Map user = {"name": "John", "age": 20}
-    print("Nama: ${user["name"]}, Umur: ${user["age"]}")
-
+    Map user = {"name": "John", "age": 20};
+    print("Nama: ${user["name"]}, Umur: ${user["age"]}");
     return user.length == 2;
-    */
   }
 
   bool? exercise33() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan kurung kurawal
-    /*
-  int score = 80
-  if score >= 60
-    print("Lulus")
-  else
-    print("Tidak Lulus")
-  */
-    // return score >= 60;
+
+    int score = 80;
+    if (score >= 60) {
+      print("Lulus");
+    } else {
+      print("Tidak Lulus");
+    }
+    return score >= 60;
   }
 
   bool? exercise34() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan titik koma
-    /*
-  List numbers = [1, 2, 3, 4, 5]
-  for (int number in numbers)
-    print(number * 2)
-  */
-    // return numbers.length == 5;
+
+    List numbers = [1, 2, 3, 4, 5];
+    for (int number in numbers) {
+      print(number * 2);
+    }
+
+    return numbers.length == 5;
   }
 
   bool? exercise35() {
     //Uncomment kode di bawah ini dan perbaikilah!
     //Error-nya disebabkan karena lupa memberikan kurung
 
-    // int x = 10
-    // int y = 20
-    // int result = x + y
-    // print("Hasil: $result")
-    // return result == 30
+    int x = 10;
+    int y = 20;
+    int result = x + y;
+    print("Hasil: $result");
+    return result == 30;
   }
 
   Widget build(context, FbkDartSymbolController controller) {
