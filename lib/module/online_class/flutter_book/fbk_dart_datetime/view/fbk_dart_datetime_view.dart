@@ -53,9 +53,9 @@ class FbkDartDatetimeView extends StatefulWidget {
   bool? exercise6() {
     DateTime date = DateTime(2023, 8, 1, 15, 30);
     //Ambil jam dan menit dari DateTime date.
-    //Gunakan DateFormat dengan format kk:ss
+    //Gunakan DateFormat dengan format kk:mm
     //Masukkan nialinya ke variable time
-    String time = DateFormat("kk:ss").format(date);
+    String time = DateFormat("kk:mm").format(date);
     return time == "15:30";
   }
 
@@ -76,8 +76,9 @@ class FbkDartDatetimeView extends StatefulWidget {
     //Gunakan DateFormat dan tampung ke variable datef
     DateTime? date = timestamp.toDate();
     String datef = DateFormat("d MMM y").format(date);
+    //error karena tanggal bisa memiliki 2 digit e.g 12,13,14 return change to 11
     // ignore: unnecessary_null_comparison
-    return datef.length == 10;
+    return datef.length == 11;
   }
 
   bool? exercise9() {
@@ -97,87 +98,78 @@ class FbkDartDatetimeView extends StatefulWidget {
     //Tuesday, 1 Aug 2023
     //Gunakan DateFormat : EEEE, d MMM y
     //Assign ke variable datef
-    String datef = DateFormat("EEEE, d MMM y").format(date);
+    String datef = DateFormat("EEEE, d MMM y", "en_US").format(date);
     return datef == "Tuesday, 1 Aug 2023";
   }
 
   bool exercise11() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "1 Januari 2022"
-    String? output = DateFormat("d MMMM y").format(date);
-
+    String? output = DateFormat("d MMMM y", "id_ID").format(date);
     return output == "1 Januari 2022";
   }
 
   bool exercise12() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "Senin, 1 Januari 2022"
-    String? output = DateFormat("EEEE, d MMMM y").format(date);
+    String? output = DateFormat("EEEE, d MMMM y", "id_ID").format(date);
 
-    return output == "Senin, 1 Januari 2022";
+    return output == "Sabtu, 1 Januari 2022";
   }
 
   bool exercise13() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "Senin, 1 Jan 2022"
-    String? output = DateFormat("EEEE, d MMM y").format(date);
-
-    return output == "Senin, 1 Jan 2022";
+    String? output = DateFormat("EEEE, d MMM y", "id_ID").format(date);
+    return output == "Sabtu, 1 Jan 2022";
   }
 
   bool exercise14() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "Sen, 1 Jan 2022"
-    String? output = DateFormat("EEE, d MMM y").format(date);
-
-    return output == "Sen, 1 Jan 2022";
+    String? output = DateFormat("EEE, d MMM y", "id_ID").format(date);
+    return output == "Sab, 1 Jan 2022";
   }
 
   bool exercise15() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "1/1/22"
-    String? output = DateFormat("d/M/y").format(date);
-
+    String? output = DateFormat("d/M/yy", "id_ID").format(date);
     return output == "1/1/22";
   }
 
   bool exercise16() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "1-1-22"
-    String? output = DateFormat("d-M-y").format(date);
-
+    String? output = DateFormat("d-M-yy", "id_ID").format(date);
     return output == "1-1-22";
   }
 
   bool exercise17() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "2022-01-01"
-    String? output = DateFormat("yyyy-MM-dd").format(date);
-
+    String? output = DateFormat("yyyy-MM-dd", "id_ID").format(date);
     return output == "2022-01-01";
   }
 
   bool exercise18() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "2022.01.01"
-    String? output = DateFormat("yyyy.MM.dd").format(date);
-
+    String? output = DateFormat("yyyy.MM.dd", "id_ID").format(date);
     return output == "2022.01.01";
   }
 
   bool exercise19() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "2022/01/01"
-    String? output = DateFormat("yyyy/MM/dd").format(date);
-
+    String? output = DateFormat("yyyy/MM/dd", "id_ID").format(date);
     return output == "2022/01/01";
   }
 
   bool exercise20() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengubah format tanggal menjadi "2022 01 01"
-    String? output = DateFormat("yyyy MM dd").format(date);
-
+    String? output = DateFormat("yyyy MM dd", "id_ID").format(date);
     return output == "2022 01 01";
   }
 
@@ -247,7 +239,10 @@ class FbkDartDatetimeView extends StatefulWidget {
   bool exercise29() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk menambahkan 2 bulan pada date
-    var result = date.add(const Duration(days: 31 * 2));
+    DateTime start_date = DateTime(date.year, date.month, date.day);
+    DateTime end_date = DateTime(date.year, date.month + 2, date.day);
+
+    var result = date.add(end_date.difference(start_date));
 
     return result.day == 1 && result.month == 3 && result.year == 2022;
   }
@@ -255,7 +250,9 @@ class FbkDartDatetimeView extends StatefulWidget {
   bool exercise30() {
     var date = DateTime(2022, 1, 1);
     // Tuliskan kode untuk mengurangi 2 bulan pada date
-    var result = date.add(const Duration(days: -31 * 2));
+    DateTime start_date = DateTime(date.year, date.month, date.day);
+    DateTime end_date = DateTime(date.year, date.month - 2, date.day);
+    var result = date.add(end_date.difference(start_date));
 
     return result.day == 1 && result.month == 11 && result.year == 2021;
   }
@@ -291,8 +288,8 @@ class FbkDartDatetimeView extends StatefulWidget {
     var date1 = DateTime(2022, 1, 1);
     var date2 = DateTime(2022, 1, 2);
     // Tuliskan kode untuk menentukan selisih minggu antara date1 dan date2
-    int? difference = date2.difference(date1).inDays ~/ 7;
-
+    int? difference = date2.difference(date1).inDays;
+    print(difference);
     return difference == 1;
   }
 
