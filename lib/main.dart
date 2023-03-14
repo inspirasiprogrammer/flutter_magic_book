@@ -1,6 +1,7 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/debug.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 /*
 Kelas Online /w Deny Ocr
@@ -11,7 +12,9 @@ void main() async {
 
   // Get.mainTheme.value = getDefaultTheme();
   Get.mainTheme.value = getDarkTheme();
-  runMainApp();
+  initializeDateFormatting('id_ID', null).then((_) => runMainApp());
+
+  //runMainApp();
 }
 
 runMainApp() async {
